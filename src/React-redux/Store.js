@@ -29,7 +29,8 @@ const rootReducer = (state = initState, action) => {
         // Product: action.payload,
         Product: [...state.Product, action.payload],
         items: action.count,
-        count: 1
+        count: 1,
+        price: 125
       };
     case DELETE:
       return {

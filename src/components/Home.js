@@ -56,9 +56,9 @@ const Home = () => {
 
   return (
     <div className="md:container md:mx-auto my-[70px]">
-      <div className="flex  lg:justify-between lg:flex-row flex-col ">
-        <div className="w-[50%] ">
-          <img src={selectImage} className="w-[80%] m-auto rounded-lg" />
+      <div className="flex  lg:justify-center  lg:flex-row flex-col sm:p-0 md:p-0 lg:p-0 xl:p-0 p-2">
+        <div className="lg:w-[50%] sm:w-[50%] xl:w-[50%] md:w-[50%] w-full ">
+          <img src={selectImage} className="w-[100%] lg:w-[60%] md-[55%] sm-[55%] xl-[50%] m-auto rounded-lg" />
           <div className="flex justify-center">
             <div className="flex flex-row justify-center my-3 ">
               {Data.pic.map((item, idx) => (
@@ -67,7 +67,7 @@ const Home = () => {
                 id="IMAGES"
                   key={idx}
                   onClick={() => handleImage(item)}
-                  className={`w-[18%] mx-2 focus:border-orange focus:opacity-60 focus:border-2 rounded-lg bg-black hover:border-orange hover:opacity-60 hover:border-2`}
+                  className={`sm:w-[13%] lg:w-[14] mx-2 focus:border-orange focus:opacity-60 focus:border-2 rounded-lg bg-black hover:border-orange hover:opacity-60 hover:border-2`}
                   src={item.thumbnail}
                 />
                 </>
@@ -76,7 +76,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-[50%] my-5">
+        <div className="xl:w-[40%] lg:w-[40%] sm:w-full md:w-[40%] my-5">
           <h2 className="font-[700] text-orange my-3">SNEAKER COMPANY</h2>
           <h1 className="font-[700] text-[2.5rem] leading-[40px]">Fall Limited Edition Sneakers</h1>
           <p className="text-DarkGrayishBlue my-7 text-[16px] lg:w-[83%]">
@@ -86,7 +86,7 @@ const Home = () => {
           </p>
               <div className="flex h-[50px] items-center">
           <h1 className="font-[700] lg:text-[1.5rem] md:text-[1.5rem]">${numberWithCommas(price)}</h1>
-                  <p className="mx-3 text-orange font-bold bg-paleOrange">50%</p>
+                  <p className="mx-3 text-orange rounded-lg py-[1px] px-[3px] font-bold bg-paleOrange">50%</p>
               </div>
 
               <h1 className="line-through text-GrayishBlue font-bold">$250.00</h1>

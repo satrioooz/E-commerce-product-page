@@ -16,7 +16,10 @@ const Cart = () => {
         <h1>Cart</h1>
       </div>
       <div className="horizontal "></div>
-      {Data.length === 0 &&<div> <p className="font-bold text-DarkGrayishBlue m-auto">You cart is empty</p></div>}
+      <div className="w-full m-auto">
+      {Data.length === 0 &&<div className="my-auto block w-full bg-slate-500"> <p className="font-bold text-DarkGrayishBlue block m-auto">You cart is empty</p></div>}
+
+      </div>
       {Data.map((item,idx) => (
           <>
       <div className="flex py-2 " key={idx} >

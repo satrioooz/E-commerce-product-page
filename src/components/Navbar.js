@@ -6,22 +6,28 @@ import Avatar from "../images/image-avatar.png";
 import { useSelector } from "react-redux";
 import {numberWithCommas} from './Format';
 import './navbar.css';
+import Menu from '../images/icon-menu.svg';
+import Close from '../images/icon-close.svg';
+
 const Navbar = () => {
-  // const total = useSelector((state) => state.items);
   const [item, setItem] = useState(false);
+  const [bar ,setBar] = useState(false);
   const Data = useSelector((state) => state.Product)
 
-  // useEffect(() => {
-  //   console.log(total);
-  // }, [total]);
   return (
     <>
-      <div className="flex lg:justify-between md:justify-between justify-between w-full lg:h-[50px] items-center p-6 ">
+      <div className="flex lg:justify-between md:justify-between justify-between  w-full lg:h-[70px] items-center p-6 ">
         <div className="flex items-center justify-between ">
+          <div className="md:hidden xl:hidden lg:hidden block mx-auto w-full" onClick={() => setBar(!bar)}>
+            {bar ?
+          <img src={Close} className="w-full px-3 lg:hidden md:hidden block" />:
+          <img src={Menu} className="w-full px-3  lg:hidden md:hidden block" />
+            }
+          </div>
           <img src={Logo} className="w-full px-3" />
-          <ul className="flex items-center  lg:flex-row md:flex-row gap-3 sm:flex-row flex-col">
+          <ul className="flex items-center z-[1]  lg:bg-white sm:bg-white md:bg-white xl:bg-white   lg:flex-row md:flex-row gap-3 sm:static sm:flex-row flex-col lg:flex lg:static md:static xl:static absolute left-0 right-0 top-[70px]">
             <li className="capitalize ">
-              <a className="text-DarkGrayishBlue" href="#">
+              <a className="text-DarkGrayishBlue hover:text-darkBlue" href="#">
                 collections
               </a>
             </li>
@@ -31,17 +37,17 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a className="text-DarkGrayishBlue" href="#">
+              <a className="text-DarkGrayishBlue hover:text-darkBlue" href="#">
                 women
               </a>
             </li>
             <li>
-              <a className="text-DarkGrayishBlue" href="#">
+              <a className="text-DarkGrayishBlue hover:text-darkBlue" href="#">
                 about
               </a>
             </li>
             <li>
-              <a className="text-DarkGrayishBlue" href="#">
+              <a className="text-DarkGrayishBlue hover:text-darkBlue" href="#">
                 contact
               </a>
             </li>
@@ -56,7 +62,7 @@ const Navbar = () => {
 
             {Data.map((item) => (
           item.Items > 0 && (
-            <span style={{padding:'1px 3px'}} className="text-White bg-orange text-xs  rounded absolute right-[80px] top-2">{item.Items}</span>
+            <span style={{padding:'1px 3px'}} className="text-White bg-orange text-xs  rounded absolute right-[82px] md:top-5 lg:top-5 xl-top-5 top-6 sm:top-5">{item.Items}</span>
             )
             ))}
         {/* <div className="w-full "> */}
