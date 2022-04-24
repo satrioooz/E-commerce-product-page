@@ -38,7 +38,6 @@ const Cart = () => {
         )}
                   <div className="m-auto">
         <img onClick={() => {
-            console.log('DELETE')
             dispatch({
                 type:DELETE,
                 payload:item.id

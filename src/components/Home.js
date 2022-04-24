@@ -23,11 +23,6 @@ const Home = () => {
       setSelectImage(item.image)
   }
 
-  useEffect(() => {
-    console.log(product)
-  })
-
-
   const handleDecrement = () => {
     if (count > 1) {
       dispatch({
@@ -61,7 +56,7 @@ const Home = () => {
 
   return (
     <div className="md:container md:mx-auto my-[70px]">
-      <div className="flex  justify-between  ">
+      <div className="flex  lg:justify-between lg:flex-row flex-col ">
         <div className="w-[50%] ">
           <img src={selectImage} className="w-[80%] m-auto rounded-lg" />
           <div className="flex justify-center">
