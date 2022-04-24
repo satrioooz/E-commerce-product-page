@@ -21,7 +21,6 @@ const Home = () => {
 
   const handleImage = (item) => {
       setSelectImage(item.image)
-      console.log(Data.price)
   }
 
   useEffect(() => {
@@ -30,7 +29,6 @@ const Home = () => {
 
 
   const handleDecrement = () => {
-    console.log("terklik");
     if (count > 1) {
       dispatch({
         type: DECREMENT,
@@ -39,7 +37,6 @@ const Home = () => {
   };
 
   const handleIncrement = () => {
-    console.log("terklik");
     dispatch({
       type: INCREMENT,
     });

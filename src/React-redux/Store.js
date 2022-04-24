@@ -34,7 +34,6 @@ const rootReducer = (state = initState, action) => {
       return {
         ...state,
         Product: state.Product.filter((item) => item.id !== action.payload),
-        items:state.Product.filter((item) => item.id !== action.payload).length
       }
     default:
       return state;
