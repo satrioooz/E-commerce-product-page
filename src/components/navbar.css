@@ -1,0 +1,33 @@
+ .section-hover{
+  width: 30%;
+  top: 55px;
+  z-index: 3;
+  padding: 10px;
+  min-height: 30vh;
+  border-radius: 10px;
+  position: absolute;
+  background: #fff;
+  right: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+.section-hover .text-card {
+  background: white;
+  z-index: 3;
+}
+
+.section-hover .text-card h1 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-hover .horizontal {
+  width: 100%;
+  height: 1.4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: hsl(220, 14%, 75%);
+}
