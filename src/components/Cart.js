@@ -32,8 +32,8 @@ const Cart = () => {
         </div>
        
         {item !== null && (
-          <div className="mx-4  ">
-            <p className="text-DarkGrayishBlue">{item?.Data}</p>
+          <div className="">
+            <p className="text-DarkGrayishBlue ">{item?.Data}</p>
 
             <div className="flex">
               <p className="text-DarkGrayishBlue">
