@@ -57,7 +57,7 @@ const Cart = () => {
       </>
       ))}
       {Data.length > 0 &&
-      <button className="bg-orange w-full h-[50px] rounded-lg text-White text-[700] text-[1.2rem]">Checkout</button>
+      <button className="bg-orange w-full h-[50px] rounded-lg text-White text-bold text-[1.2rem]">Checkout</button>
       }
     </div>
     </div>

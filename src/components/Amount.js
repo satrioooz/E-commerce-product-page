@@ -74,7 +74,6 @@ const Amount = () => {
           />
           Add to cart
           </div>
-          {/* <span className="text-center p-0"></span> */}
         </button>
       </div>
     </div>

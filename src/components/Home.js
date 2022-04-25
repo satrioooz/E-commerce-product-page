@@ -58,6 +58,7 @@ const Home = () => {
                   <img
                     className="w-[40vh]  mx-auto  lg:hidden md:hidden sm:hidden xl:hidden"
                     src={item}
+                    key={idx}
                   />
               ))}
             </Slider>
@@ -86,7 +87,7 @@ const Home = () => {
 
         <div className="xl:w-[40%] lg:w-[40%] sm:w-full md:w-[40%] my-1 lg:my-5">
           <h2 className="font-[700] text-orange my-3">SNEAKER COMPANY</h2>
-          <h1 className="font-[700] lg:text-[2.5rem] text-[1.5rem] xl:text-[2.5rem] md:text-[2.5rem] leading-[40px]">
+          <h1 className="font-[700] lg:text-[2.5rem] text-[1.9rem] xl:text-[2.5rem] md:text-[2.5rem] leading-[40px]">
             Fall Limited Edition Sneakers
           </h1>
           <p className="text-DarkGrayishBlue my-7 text-[16px] w-full xl:w-[83%] md:w-[83%] lg:w-[83%]">
