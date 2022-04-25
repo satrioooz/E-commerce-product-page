@@ -27,7 +27,9 @@ const Cart = () => {
       {Data.map((item,idx) => (
           <>
       <div className="flex py-2 " key={idx} >
-        <img className="w-[20%] rounded-lg" src={item?.Thumb} />
+        <div className="w-[23%]">
+        <img className="lg:w-[70%] md:w-[70%] xl:w-[70%] w-[80%] rounded-lg" src={item?.Thumb} />
+        </div>
        
         {item !== null && (
           <div className="mx-4  ">
