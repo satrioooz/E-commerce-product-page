@@ -1,7 +1,12 @@
- .section-hover{
+.desktop {
+  display: flex;
+  gap: 10px;
+}
+
+.section-hover {
   width: 30%;
   top: 55px;
-  z-index: 3;
+  z-index:1;
   padding: 10px;
   min-height: 30vh;
   border-radius: 10px;
@@ -10,8 +15,6 @@
   right: 25px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-
 
 .section-hover .text-card {
   background: white;
@@ -30,4 +33,40 @@
   left: 0;
   right: 0;
   background: hsl(220, 14%, 75%);
+}
+
+.mobile {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition:5s ease-in-out;
+}
+
+@media (max-width: 640px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  transition:all .5s ease-in-out;
+    flex-direction: column;
+    z-index:99;
+    top: 80px;
+    justify-content: space-around;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #fff;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .section-hover{
+  width:100%;
+  top:80px;
+  right:5px;
+  left:5px;
+  }
+
 }

@@ -18,21 +18,23 @@ const Navbar = () => {
     <>
       <div className="flex lg:justify-between md:justify-between justify-between  w-full lg:h-[70px] items-center p-6 ">
         <div className="flex items-center justify-between ">
-          <div className="md:hidden xl:hidden lg:hidden block mx-auto w-full" onClick={() => setBar(!bar)}>
+          <div className="md:hidden xl:hidden lg:hidden block  w-full" onClick={() => setBar(!bar)}>
             {bar ?
-          <img src={Close} className="w-full px-3 lg:hidden md:hidden block" />:
-          <img src={Menu} className="w-full px-3  lg:hidden md:hidden block" />
+            // <p>hel</p>
+          <img src={Close} className="w-full px-0 lg:hidden md:hidden block" />
+          :
+          <img src={Menu} className="w-full px-0  xl:hidden lg:hidden md:hidden block" />
             }
           </div>
           <img src={Logo} className="w-full px-3" />
-          <ul className="flex items-center z-[1]  lg:bg-white sm:bg-white md:bg-white xl:bg-white   lg:flex-row md:flex-row gap-3 sm:static sm:flex-row flex-col lg:flex lg:static md:static xl:static absolute left-0 right-0 top-[70px]">
+          <ul className={bar ? "mobile" : "desktop"}>
             <li className="capitalize ">
               <a className="text-DarkGrayishBlue hover:text-darkBlue" href="#">
                 collections
               </a>
             </li>
             <li>
-              <a className="text-DarkGrayishBlue after:text-darkBlue" href="#">
+              <a className="text-DarkGrayishBlue hover:text-darkBlue" href="#">
                 men
               </a>
             </li>

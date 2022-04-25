@@ -7,10 +7,14 @@ import './navbar.css';
 export const DELETE = "DELTE_CART"
 
 const Cart = () => {
+
+
+
     const dispatch = useDispatch();
     const Data = useSelector((state) => state.Product);
   return (
-      <>
+    <>
+      <div className=" ">
     <div className="section-hover">
       <div className="text-card">
         <h1>Cart</h1>
@@ -50,6 +54,7 @@ const Cart = () => {
       </div>
       </>
       ))}
+    </div>
     </div>
     </>
   );
