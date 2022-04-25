@@ -25,7 +25,6 @@ const Cart = () => {
 
       </div>
       {Data.map((item,idx) => (
-          <>
       <div className="flex py-2 " key={idx} >
         <div className="w-[23%]">
         <img className="lg:w-[70%] md:w-[70%] xl:w-[70%] w-[80%] rounded-lg" src={item?.Thumb} />
@@ -54,7 +53,6 @@ const Cart = () => {
         }} src={IconDelete}/>
             </div>
       </div>
-      </>
       ))}
       {Data.length > 0 &&
       <button className="bg-orange w-full h-[50px] rounded-lg text-White text-bold text-[1.2rem]">Checkout</button>

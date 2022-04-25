@@ -71,7 +71,6 @@ const Home = () => {
           <div className="flex justify-center">
             <div className="flex flex-row justify-center my-3 ">
               {Data.pic.map((item, idx) => (
-                <>
                   <img
                     id="IMAGES"
                     key={idx}
@@ -79,7 +78,6 @@ const Home = () => {
                     className={`sm:w-[13%] lg:block md:block sm:block xl:block hidden lg:w-[14] mx-2 focus:border-orange focus:opacity-60 focus:border-2 rounded-lg bg-black hover:border-orange hover:opacity-60 hover:border-2`}
                     src={item.thumbnail}
                   />
-                </>
               ))}
             </div>
           </div>
@@ -100,7 +98,7 @@ const Home = () => {
             <h1 className="font-[700] lg:text-[1.5rem] md:text-[1.5rem]">
               ${numberWithCommas(price)}
             </h1>
-            <p className="mx-3 text-orange rounded-lg py-[1px] px-[3px] font-bold bg-paleOrange">
+            <p className="my-auto mx-2 text-orange rounded-lg py-[1px] px-[3px] font-bold bg-paleOrange">
               50%
             </p>
             </div>

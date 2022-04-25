@@ -59,12 +59,11 @@ const Navbar = () => {
         <div id="right" className="flex items-center  ">
           <img onClick={() => {
             setItem(!item)
-            console.log(item);
             }} id='keranjang' className="w-full mx-7 cursor-pointer" src={Keranjang} />
 
-            {Data.map((item) => (
+            {Data.map((item,idx) => (
           item.Items > 0 && (
-            <span style={{padding:'1px 3px'}} className="text-White bg-orange text-xs  rounded absolute right-[82px] md:top-5 lg:top-5 xl-top-5 top-6 sm:top-5">{item.Items}</span>
+            <span key={idx} style={{padding:'1px 3px'}} className="text-White bg-orange text-xs  rounded absolute right-[82px] md:top-5 lg:top-5 xl-top-5 top-6 sm:top-5">{item.Items}</span>
             )
             ))}
         {/* <div className="w-full "> */}
